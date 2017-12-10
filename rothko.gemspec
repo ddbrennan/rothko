@@ -13,4 +13,5 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Provides the 'Drawing' class which is initialized with a filepath and a width. The image will be processed and put to the terminal as a collection of ANSI BG colored squares.}
   spec.homepage      = "https://github.com/ddbrennan/rothko"
   spec.license       = "MIT"
+  spec.files         = Dir['lib/**/*.rb']
 end
