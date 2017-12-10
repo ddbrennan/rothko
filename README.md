@@ -1,8 +1,8 @@
 # Rothko
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rothko`. To experiment with that code, run `bin/console` for an interactive prompt.
+Provides the 'Rothko::Drawing' class which is initialized with a filepath and a width. The image will be processed and put to the terminal as a collection of ANSI BG colored squares.
 
-TODO: Delete this and the text above, and describe your gem
+Named for Mark Rothko, painter of squares.
 
 ## Installation
 
@@ -22,13 +22,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Example code:
 
-## Development
+Rothko::Drawing.new('windows.png', 100)
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+The result of this is a 100 'pixel' (pixel = two empty spaces with a colored background) wide image of the Windows "Bliss" background. The pallette leaves a lot of photos looking muddied, so I recommend creating original artwork that conforms to the limitations of the medium. 
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+https://www.piskelapp.com/ is great for this - just use the ANSI color palette (included in this directory) and the result will look just like your work.
 
 ## Contributing
 
