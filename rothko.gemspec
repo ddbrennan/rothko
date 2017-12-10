@@ -6,12 +6,12 @@ require "rothko/version"
 Gem::Specification.new do |spec|
   spec.name          = "rothko"
   spec.version       = Rothko::VERSION
-  spec.authors       = ["ddbrennan"]
+  spec.authors       = ["David Brennan"]
   spec.email         = ["ddbren@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Convert PNG graphics into pixel art in the terminal}
+  spec.description   = %q{Provides the 'Drawing' class which is initialized with a filepath and a width. The image will be processed and put to the terminal as a collection of ANSI BG colored squares.}
+  spec.homepage      = "https://github.com/ddbrennan/rothko"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
