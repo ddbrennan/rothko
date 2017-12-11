@@ -14,4 +14,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/ddbrennan/rothko"
   spec.license       = "MIT"
   spec.files         = Dir['lib/**/*.rb']
+  spec.add_dependency "chunky_png"
+  spec.add_dependency "colorize"
 end
