@@ -7,13 +7,13 @@ module Rothko
   class Drawing
 
     attr_accessor :img, :width
-    attr_reader :pallette
+    attr_reader :palette
 
     include ChunkyPNG::Color
 
     # Pallette of default ANSI colors. Closest match is found from this hash,
     # so these may be altered to produce a more faithful image or change colors.
-    @@pallette = {
+    @@palette = {
       "g" => [0,230,22],
       "G" => [0,176,14],
       "w" => [230,229,230],
@@ -50,7 +50,7 @@ module Rothko
 
     # Finds height of the image relative to provided width
     def get_height(img)
-      new_height = img.height / (img.width / self.width)
+      new_height = img.height / (img.width.to_f / self.width.to_f)
     end
 
     # Iterates over each pixel of resized image to find closest color
@@ -64,11 +64,11 @@ module Rothko
       end.join
     end
 
-    # Iterates over the pallette to find the most similar color
+    # Iterates over the palette to find the most similar color
     def find_closest_term_color(pixel_values)
       color = ""
       lil_dist = 195075
-      @@pallette.each do |col_name, col_values|
+      @@palette.each do |col_name, col_values|
         dist = find_distance(col_values, pixel_values)
         if dist < lil_dist
           lil_dist = dist
