@@ -50,7 +50,7 @@ module Rothko
 
     # Finds height of the image relative to provided width
     def get_height(img)
-      new_height = img.height / (img.width.to_f / self.width.to_f)
+      new_height = (img.height / (img.width.to_f / self.width.to_f)).ceil
     end
 
     # Iterates over each pixel of resized image to find closest color
